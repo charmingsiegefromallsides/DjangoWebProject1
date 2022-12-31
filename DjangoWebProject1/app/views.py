@@ -78,10 +78,10 @@ def geturl(request):
         root=ET.fromstring(data.decode('utf-8'))
         elem=root.find('./post')
         #print(root.elem['post'].attrib['file_url'])
-        url=str(elem.attrib['file_url'])
-        print("generated url: "+url+" for touhou: " + touhouname)
+        urls=str(elem.attrib['file_url'])
+        print("generated url: "+urls+" for touhou: " + touhouname)
     except:
         print("some error occuured")
         return JsonResponse({'url': "ERROR"})
     
-    return JsonResponse({'url': url})
+    return JsonResponse({'img': urls})

@@ -3,7 +3,7 @@
 function buttonClicked(buttonId) {
     tag = buttonId;
     console.log('in function button click');
-    console.log(tag);
+    //console.log(tag);
     // ...
     tagHandoff(tag)
 }
@@ -22,36 +22,12 @@ function tagHandoff(tag) {
             'tag': tag
         },
         success: function(data, tag) {
-            var url = data.urls;
-            console.log(url)
-            console.log(data)
+            var url = data.img;
             $('#touhouimg').attr('src', url);
-            document.getElementById('touhouimg').src = url;
-            /*
-            var url = data.url;
-            console.log(url);
-            console.log(data.tag);
-            console.log("======");
-            cont = document.getElementById(data.tag);
-            document.getElementById(data.tag).innerHTML = '';
-            const img = document.createElement('img');
-            img.src = url;
-            cont.appendChild(img);
-            */
         }
     });
 }
 
-
-function update_image(url, tag) {
-    console.log(url)
-    console.log(tag)
-    cont = document.getElementById('tag')
-    document.getElementById('tag').innerHTML = ''
-    const img = document.createElement('img');
-    img.src = url;
-    cont.appendChild(img);
-}
 
 /*
 
