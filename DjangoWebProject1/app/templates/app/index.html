@@ -1,0 +1,34 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>GIB 2HU</h1>
+    <p class="lead">click on a game, then on a girl and you get random cute images</p>
+    <!--<p><button class="btn btn-primary btn-large">Start</button></p>-->
+</div>
+
+<!--<div id="image-container"></div>-->
+<img id="touhouimg"
+ src=""
+ alt="" />
+
+<div class="row">
+    <div class="Youmu">
+        <p>
+            {% csrf_token %}
+            <a class="youmu-btn btn" id="konpaku_youmu" onclick="buttonClicked(this.id)">Show me Youmu &raquo;</a>
+            <a class="remi-btn btn" id="remilia_scarlet" onclick="buttonClicked(this.id)">Show me Remilia &raquo;</a>
+            <a class="suika-btn btn" id="ibuki_suika" onclick="buttonClicked(this.id)">Show me Suika &raquo;</a>
+            <a class="reisen-btn btn" id="reisen_udongein_inaba" onclick="buttonClicked(this.id)">Show me Reisen &raquo;</a>
+        </p>
+
+        <div class="remichange"> </div>
+        
+
+    </div>
+
+</div>
+<!-- <button style="background-image: url('image.jpg');">Button</button>
+ -->
+{% endblock %}
